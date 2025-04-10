@@ -1,6 +1,6 @@
 {
     "name": "mcp-mgr",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "description": "A standalone TypeScript library for discovering, configuring, connecting to, and interacting with Model Context Protocol (MCP) servers.",
@@ -18,7 +18,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/witt3rd/mcp-mgr.git"
+        "url": "https://github.com/witt3rd/mcp-mgr-ts.git"
     },
     "files": [
         "dist",

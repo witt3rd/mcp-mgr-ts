@@ -1,4 +1,4 @@
-import { McpManager, ToolDefinition, McpServerConfig } from 'mcp-mgr'; // Import necessary types
+import { McpManager, ToolDefinition, McpServerConfig } from 'mcp-mgr';
 
 async function main() {
     console.log('Initializing MCP Manager...');
@@ -11,7 +11,7 @@ async function main() {
         console.log('MCP Manager Initialized.');
 
         // --- Demonstrate Programmatic Registration ---
-        const memoryServerName = 'example-memory-server'; // Unique name for the server
+        const memoryServerName = 'example-memory-server';
         const memoryServerConfig: McpServerConfig = {
             command: 'npx',
             args: ['-y', '@modelcontextprotocol/server-memory'],
@@ -37,30 +37,22 @@ async function main() {
         await new Promise(resolve => setTimeout(resolve, 1000));
 
 
-        // listConnectedServers returns an array of server names (strings)
         const connectedServerNames = manager.listConnectedServers();
         console.log(`\nFound ${connectedServerNames.length} connected MCP server(s):`);
 
-        // Iterate over server names and fetch details/tools
         for (const serverName of connectedServerNames) {
-            // Fetch server config if needed (optional for this example)
-            // const config = await manager.getServerConfig(serverName);
-            // console.log(`- ${config?.name || serverName} (${serverName})`); // Display name from config or use serverName
-            console.log(`- ${serverName}`); // Just log the server name/ID
+            console.log(`- ${serverName}`);
 
-            // List tools for the server
             const tools: ToolDefinition[] = await manager.listTools(serverName);
             if (tools.length > 0) {
                 console.log('  Tools:');
                 tools.forEach((tool: ToolDefinition) => console.log(`    - ${tool.name}: ${tool.description}`));
             }
             // Resource/Template listing is not directly supported by the manager API shown
-            // Resource/Template listing is not directly supported by the manager API shown
         }
 
 
         // --- Demonstrate Tool Call on Registered Server ---
-        // Check if our programmatically registered memory server is connected
         if (connectedServerNames.includes(memoryServerName)) {
             console.log(`\nAttempting to use tools on "${memoryServerName}"...`);
             try {
