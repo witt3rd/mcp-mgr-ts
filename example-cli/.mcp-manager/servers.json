@@ -1,0 +1,11 @@
+{
+  "example-memory-server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-memory"
+    ],
+    "displayName": "Example Memory Server (Programmatic)",
+    "autoConnect": true
+  }
+}

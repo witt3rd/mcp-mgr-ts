@@ -1,0 +1,41 @@
+{
+    "name": "mcp-manager",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "description": "A standalone TypeScript library for discovering, configuring, connecting to, and interacting with Model Context Protocol (MCP) servers.",
+    "keywords": [
+        "mcp",
+        "model context protocol",
+        "typescript",
+        "server",
+        "manager",
+        "sdk",
+        "process management",
+        "tool invocation"
+    ],
+    "author": "Donald Thompson <witt3rd@witt3rd.com> (https://github.com/witt3rd)",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/witt3rd/mcp-manager.git"
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE.md"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build"
+    },
+    "devDependencies": {
+        "@types/node": "^22.14.0",
+        "typescript": "^5.8.3",
+        "@types/fs-extra": "^11.0.4"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.9.0",
+        "fs-extra": "^11.2.0"
+    }
+}
