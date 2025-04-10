@@ -1,4 +1,4 @@
-import { McpManager, ToolDefinition, McpServerConfig } from 'mcp-manager'; // Import necessary types
+import { McpManager, ToolDefinition, McpServerConfig } from 'mcp-mgr'; // Import necessary types
 
 async function main() {
     console.log('Initializing MCP Manager...');

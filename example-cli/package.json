@@ -12,7 +12,9 @@
     "author": "",
     "license": "ISC",
     "type": "commonjs",
-    "dependencies": {},
+    "dependencies": {
+        "mcp-mgr": "file:.."
+    },
     "devDependencies": {
         "@types/node": "^22.14.0",
         "typescript": "^5.8.3"

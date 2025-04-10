@@ -1,5 +1,5 @@
 {
-    "name": "mcp-manager",
+    "name": "mcp-mgr",
     "version": "1.0.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -18,7 +18,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/witt3rd/mcp-manager.git"
+        "url": "https://github.com/witt3rd/mcp-mgr.git"
     },
     "files": [
         "dist",
